@@ -1,18 +1,12 @@
-use crate::day1::{day1a, day1b, run_day1};
-use brunch::{Bench, benches};
+use crate::day1::{bench_day1, day1a, day1b, run_day1};
+use crate::day2::run_day2;
+
 
 mod day1;
+mod day2;
 
 fn main() {
     //println!("Hello, world!");
-    run_day1();
-
-    let day1 = include_str!("../inputs/1a.txt").lines();
-
-    benches!(
-        inline:
-
-        Bench::new("day1a").run_seeded_with(|| day1.clone(), |input| { day1a(input) }),
-        Bench::new("day1b").run_seeded_with(|| day1.clone(), |input| { day1b(input)}),
-    )
+    //bench_day1();
+    run_day2();
 }
