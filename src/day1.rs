@@ -1,7 +1,7 @@
 use std::num::ParseIntError;
 
 pub fn day1() {
-    let input = include_str!("../inputs/1e.txt").lines();
+    let input = include_str!("../inputs/1a.txt").lines();
     let mut values = Vec::new();
 
     let last = input.fold(0, |acc, x| {
